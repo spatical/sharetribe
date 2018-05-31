@@ -262,6 +262,7 @@ nl:
         search_by_name_email: "Zoek voor een naam, email, of weergavenaam"
         reset_search: "Toon alles"
         for_search_terms: "voor: %{terms}"
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: "Nieuwe layout"
         description_roadmap_new: "Wanneer nieuwe componenten van de layout beschikbaar worden gemaakt voor je marktplaats, kun je kiezen of je de nieuwe wilt gebruiken of dat je de oude wilt blijven gebruiken. Je kunt altijd wisselen op deze pagina. Het is aan te raden om altijd de nieuwe versie te gebruiken, aangezien de oude componenten op een gegeven moment waarschijnlijk zullen verdwijnen. In die gevallen zul je uiteraard lang van te voren op de hoogte gesteld worden."
@@ -285,6 +286,7 @@ nl:
         invalid_facebook_connect_id: "Client ID kan enkel nummers bevatten"
         facebook_connect_secret: "Facebook client geheim"
         invalid_facebook_connect_secret: "Client geheim kan enkel nummer en letter A-F bevatten."
+        enable_facebook_login: "Sta gebruikers toe in te loggen met hun Facebook account"
         save: "Opslaan instellingen"
       analytics:
         analytics: Analytics
@@ -292,6 +294,10 @@ nl:
         google_analytics_key_info_text: "Tracking ID van je Google Analytics account."
         google_analytics_key_info_text_with_instructions: "Tracking ID van je Google Analytics account. %{instructions_link}."
         google_analytics_instructions_link_text: "Lees meer over het connecteren van Google Analytics"
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: "Instellingen opslaan"
       menu_links:
         menu_links: "Menu koppelingen"
@@ -372,6 +378,21 @@ nl:
           other_party: "Andere partij"
         participants: "Conversatie: %{starter} met %{author}"
         profile: "Profiel van %{author}"
+      testimonials:
+        testimonials: "Bekijk recensies"
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: Transactie
+          author: Auteur
+          receiver: Ontvanger
+          status: Status
+          grade: Cijfer
+          note: Aantekening
+        status:
+          waiting: "In afwachting van recensie"
+          skipped: Overgeslagen
+          published: Gepubliceerd
     custom_fields:
       edit:
         edit_listing_field: "Edit advertentie veld '%{field_name}'"
@@ -646,11 +667,17 @@ nl:
         payments_not_enabled: "Betalingen zijn niet ingeschakeld voor je marktplaats."
     transaction_types:
       sell: Verkopen
+      sell_w_online_payment: "Verkopende met online betaling"
+      sell_wo_online_payment: "Verkopende zonder online betaling"
       rent: Verhuren
+      rent_w_online_payment: "Verhurende met online betaling"
+      rent_wo_online_payment: "Verhurende zonder online betaling"
       give: Weggeven
       lend: Uitlenen
       swap: Ruilen
       service: Aanbod
+      service_w_online_payment: "Aangeboden met online betaling"
+      service_wo_online_payment: "Aangeboden zonder online betaling"
       request: Vraag
       inquiry: Verzoek
       share_for_free: "Gratis delen"
@@ -712,7 +739,7 @@ nl:
       title: "Commissie en betalingverwerkingskosten"
       stripe: Stripe
       paypal: PayPal
-      info: "Betalingen in %{service_name} worden verwerkt door Stripe (credit/debit card) of PayPal. %{service_name} brengt een commissie in rekening, afhankelijk van welke betalingssysteem wordt gekozen. Het betalingssysteem zelf brengt ook kosten in rekening voor iedere betaling."
+      info: "Betalingen in %{service_name} worden verwerkt door de betalingsdiensten hieronder. %{service_name} brengt een commissie in rekening, afhankelijk van welke betalingssysteem wordt gekozen. Het betalingssysteem zelf brengt ook kosten in rekening voor iedere betaling."
     paypal_fee_info:
       title: "PayPal proces kosten"
       body_text: |-
@@ -1059,7 +1086,7 @@ nl:
       money_will_be_transferred: "Het geld zal overgemaakt worden naar %{recipient_name} wanneer a) je het verzoek als afgehandeld hebt gemarkeerd of b) wanneer er %{automatic_confirmation_days} dagen verstreken zijn sinds jouw betaling."
       listing_per_unit_title: "%{title}, per %{unit_type}"
       stripe:
-        you_have_made_new_payment: "Je hebt <b>%{payment_sum}</b> betaald voor <b>%{listing_title}</b> aan %{service_name}. Het geld zal worden overgemaakt aan %{recipient_full_name} wanneer je de bestelling als voltooid hebt gemarkeerd."
+        you_have_made_new_payment: "Je hebt <b>%{payment_sum}</b> betaald voor <b>%{listing_title}</b>. Het geld wordt vastgehouden door %{service_name} en zal worden overgemaakt aan %{recipient_full_name} wanneer je de bestelling als voltooid hebt gemarkeerd."
     new_testimonial:
       has_given_you_feedback_in_kassi: "%{name} heeft u feedback gegeven op %{service_name}"
       you_can_give_feedback_to: "U heeft nog geen feedback geven aan %{name}."
@@ -1147,6 +1174,8 @@ nl:
       reject_authorization_error: "Het annuleren van de preautorisatie van de PayPal betaling is mislukt. Probeer opnieuw a.u.b."
     stripe:
       generic_error: "Er is een fout opgetreden tijdens de betaling. Je Stripe betaling kon niet worden uitgevoerd."
+      accept_authorization_error: "Er is een fout opgetreden tijdens een poging on een vooraf geauthoriseerde betaling te accepteren. Gelieve het opnieuw te proberen."
+      reject_authorization_error: "Er is een fout opgetreden tijdens een poging on een vooraf geauthoriseerde betaling te weigeren. Gelieve het opnieuw te proberen."
   error_pages:
     back_to_kassi_front_page: "Terug naar de voorpagina"
     error_404:
@@ -1541,6 +1570,7 @@ nl:
         one: "De website gaat over %{count} minuut offline voor onderhoud"
         other: "De website gaat over %{count} minuten offline voor onderhoud"
       automatically_logged_out_please_sign_in: "Je bent automatisch uitgelogd. Log opnieuw in."
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: Account
       notifications: Notificaties
@@ -1959,7 +1989,8 @@ nl:
         other: "De toegang tot %{service_name} is beperkt. U heeft een e-mail adres nodig dat aantoont dat u gerechtigd bent om aan te sluiten."
       family_name: Familienaam
       given_name: Voornaam
-      i_accept_the: "Ik accepteer de"
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: "Ik geef hierbij toestemming voor het ontvangen van emails van %{service_name}, en ik begrijp dat ik dit later altijd kan veranderen."
       invalid_invitation_code: "Deze invitatie code is niet geldig."
       invitation_code: "Invitatie code"
       not_required: ", niet vereist"
@@ -1968,6 +1999,7 @@ nl:
       show_my_name_to_others: "Toon mijn echte naam aan andere %{service_name} gebruikers"
       sign_up: "Maak een nieuwe account op %{service_name}"
       terms: gebruiksvoorwaarden
+      privacy: ~
       username_is_in_use: "Deze gebruikersnaam is al in gebruik."
       username_is_invalid: "Gebruikersnaam is ongeldig. Toegestane tekens zijn letters, nummers en liggend streepje."
       visible_only_to_you: "alleen zichtbaar voor jou en het %{service_name} team"
@@ -2072,6 +2104,7 @@ nl:
       delete_personal_information: "Als je je account verwijdert, zal al je persoonlijke informatie (naam, telefoonnummer, adres, e-mail, profiel afbeelding, enz...) permanent verwijderd worden. Dit kan niet meer ongedaan worden gemaakt. Al de advertenties die je hebt aangemaakt, worden verwijderd. Je kunt je account niet opnieuw activeren."
       delete_information_others_involved: "Informatie waar andere leden bij betrokken zijn (gesprekken met andere mensen, transacties die je gedaan hebt, feedback die je aan anderen hebt gegeven, enz...) verdwijnen niet wanneer je je account verwijdert. In deze gevallen zal jouw naam echter niet meer getoond worden."
       unfinished_transactions: "Je account kan niet worden verwijderd omdat je lopende transacties hebt. Sluit aub alle transacties alvorens je je account verwijdert."
+      only_admin: ~
       new_password: "Nieuw wachtwoord"
       save: Opslaan
       these_fields_are_shown_only_to_you: "Gebruikersnaam is zichtbaar in je profiel tenzij je je naam hebt opgegeven. Overige informatie is alleen zichtbaar voor jou."
@@ -2418,12 +2451,15 @@ nl:
       need_info: "We hebben wat informatie van je nodig om betalingen te kunnen sturen."
       select_country: "Kies land..."
       legal_name: "Officiele naam"
+      first_name: Voornaam
+      last_name: Achternaam
       country: Land
       birth_date: Geboortedatum
       ssn_last_4: Sofinummer
       personal_id_number: "Persoonlijk ID nummer"
       address_country: Land
       address_state: Staat/Provincie
+      address_province: Provincie
       address_city: Plaats
       address_postal_code: Postcode
       address_line1: Adres
@@ -2438,6 +2474,7 @@ nl:
       bank_routing_1: Bankcode
       bank_routing_2: Filiaalcode
       bank_currency: "Valuta bankrekening"
+      update_also_bank_account: "Werk ook bankrekeningnummer bij"
       messages:
         account_number: Bankrekeningnummer
         routing_number: "Routing nummer"
@@ -2462,6 +2499,7 @@ nl:
     form_pin:
       social_insurance_number: "Social Insurance Number (SIN)"
       social_security_number: "Social Security Number (SSN)"
+      ssn_last_4: "Laatste 4 cijfers van Social Security Number (SSN)"
       hong_kong_identity_card: "Hong Kong Identity Card Number (HKID)"
       singapore_identity_card: "National Registration Identity Card (NRIC) of Foreign Identification Number (FIN)"
       messages:

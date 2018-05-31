@@ -333,6 +333,10 @@ function initialize_signup_form(locale, username_in_use_message, invalid_usernam
     link.preventDefault();
     $('#terms').lightbox_me({ centered: true, zIndex: 1000000 });
   });
+  $('#privacy_link').click(function(link) {
+    link.preventDefault();
+    $('#privacy').lightbox_me({ centered: true, zIndex: 1000000 });
+  });
   var form_id = "#new_person";
   //name_required = (name_required == 1) ? true : false
   $(form_id).validate({
@@ -617,6 +621,9 @@ function initialize_admin_edit_tribe_look_and_feel_form(locale, community_id, in
 function initialize_admin_social_media_form(locale, community_id, invalid_twitter_handle_message, invalid_facebook_connect_id_message, invalid_facebook_connect_secret_message) {
   translate_validation_messages(locale);
   var form_id = "#edit_community_" + community_id;
+  $("#community_facebook_connect_enabled").click(function(){
+    $("#community_facebook_connect_id, #community_facebook_connect_secret").prop('disabled', !this.checked);
+  });
   $(form_id).validate({
      rules: {
        "community[twitter_handle]": {required: false, minlength: 1, maxlength: 15, regex: "^([A-Za-z0-9_]+)?$"},
@@ -746,6 +753,10 @@ function initialize_pending_consent_form(email_invalid_message, invitation_requi
   $('#terms_link').click(function(link) {
     link.preventDefault();
     $('#terms').lightbox_me({ centered: true, zIndex: 1000000 });
+  });
+  $('#privacy_link').click(function(link) {
+    link.preventDefault();
+    $('#privacy').lightbox_me({ centered: true, zIndex: 1000000 });
   });
   $('#pending_consent_form').validate({
     errorPlacement: function(error, element) {

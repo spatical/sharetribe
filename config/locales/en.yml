@@ -260,6 +260,7 @@ en:
         search_by_name_email: "Search for a name, email or display name"
         reset_search: "Show all"
         for_search_terms: "for: %{terms}"
+        this_makes_the_user_an_admin: "This makes the user an admin. You should notify the user about their responsibilities and that they should review the Sharetribe terms of use. Are you sure you want to proceed?"
       new_layout:
         new_layout: "New layout"
         description_roadmap_new: "When new layout components are made available for your marketplace, you can choose whether you want to start using the new component or continue using the old one. You can toggle the selection at any point from this page. It's recommended to always be using the new version, as the old components might be phased out at some point. In case a component you're currently using is going to be phased out, you will be contacted in advance."
@@ -283,6 +284,7 @@ en:
         invalid_facebook_connect_id: "Client id should contain only numbers."
         facebook_connect_secret: "Facebook client secret"
         invalid_facebook_connect_secret: "Client secret should contain only numbers and letters from a to f."
+        enable_facebook_login: "Allow users to log in with their Facebook account"
         save: "Save settings"
       analytics:
         analytics: Analytics
@@ -290,6 +292,10 @@ en:
         google_analytics_key_info_text: "Tracking ID of your Google Analytics account."
         google_analytics_key_info_text_with_instructions: "Tracking ID of your Google Analytics account. %{instructions_link}."
         google_analytics_instructions_link_text: "Read more about connecting Google Analytics"
+        sharetribe_analytics: "Sharetribe analytics"
+        sharetribe_analytics_info_text_with_instructions: "To improve Sharetribe's services and support, Sharetribe tracks marketplace members activity. Personal data is not collected and this information is not shared outside the Sharetribe team. This tracking can be disabled entirely. %{instructions_link}"
+        sharetribe_analytics_instructions_link_text: "Read more about Sharetribe's analytics."
+        end_user_analytics: "Allow Sharetribe to track members activity in order to improve Sharetribe's services"
         save: "Save settings"
       menu_links:
         menu_links: "Menu links"
@@ -370,6 +376,21 @@ en:
           other_party: "Other party"
         participants: "Conversation: %{starter} with %{author}"
         profile: "%{author}'s Profile"
+      testimonials:
+        testimonials: 'View reviews'
+        no_testimonials_found: 'No reviews found'
+        displaying_xx_reviews: 'Displaying <b>%{count}</b> reviews in transactions %{tx_from} - %{tx_to} of <b>%{all_count}</b> reviews in total'
+        headers:
+          transaction: Transaction
+          author: Author
+          receiver: Receiver
+          status: Status
+          grade: Grade
+          note: Note
+        status:
+          waiting: "Waiting for review"
+          skipped: Skipped
+          published: Published
     custom_fields:
       edit:
         edit_listing_field: "Edit listing field '%{field_name}'"
@@ -643,11 +664,17 @@ en:
         payments_not_enabled: "Payments are not enabled for your marketplace"
     transaction_types:
       sell: Selling
+      sell_w_online_payment: "Selling with online payment"
+      sell_wo_online_payment: "Selling without online payment"
       rent: "Renting out"
+      rent_w_online_payment: "Renting out with online payment"
+      rent_wo_online_payment: "Renting out without online payment"
       give: "Giving away"
       lend: Lending
       swap: Swapping
       service: Offering
+      service_w_online_payment: "Offering with online payment"
+      service_wo_online_payment: "Offering without online payment"
       request: Requesting
       inquiry: Announcement
       share_for_free: "Sharing for free"
@@ -1144,6 +1171,8 @@ en:
       reject_authorization_error: "An error occurred while trying to reject preauthorized Paypal payment. Please, try again."
     stripe:
       generic_error: "An error occurred during the payment process. Could not finalize your Stripe payment."
+      accept_authorization_error: "An error occurred while trying to accept preauthorized Stripe payment. Please, try again."
+      reject_authorization_error: "An error occurred while trying to reject preauthorized Stripe payment. Please, try again."
   error_pages:
     back_to_kassi_front_page: "Back to the front page"
     error_404:
@@ -1389,7 +1418,7 @@ en:
       how_to_use: "How it works"
       info_about_kassi: "Information about %{service_name}"
       news: News
-      register_details: Privacy
+      register_details: "Privacy Policy"
       terms: "Terms of use"
     logged_in:
       admin: Admin
@@ -1538,6 +1567,7 @@ en:
         one: "The website will be offline for maintenance in %{count} minute"
         other: "The website will be offline for maintenance in %{count} minutes"
       automatically_logged_out_please_sign_in: "You have been automatically logged out. Please log in again."
+      stripe_you_account_balance_is_not_0: "You account balance is not 0 so it cannot be deleted. This might mean that you have transactions waiting to be completed or that there is money waiting to be paid out to your bank account. Please contact the %{service_name} team to learn more."
     settings:
       account: Account
       notifications: Notifications
@@ -1956,7 +1986,8 @@ en:
         other: "The access to %{service_name} is restricted. You need an email address that proves that you are entitled to join."
       family_name: "Last name"
       given_name: "First name"
-      i_accept_the: "I accept the"
+      i_accept_the_terms_and_privacy: "I accept the %{terms} and %{privacy}"
+      admin_emails_consent: "I accept to receive occasional emails from the %{service_name} team and understand that I can change my mind at any time"
       invalid_invitation_code: "The invitation code is not valid."
       invitation_code: "Invitation code"
       not_required: ", not required"
@@ -1964,7 +1995,8 @@ en:
       password_again: "Confirm password"
       show_my_name_to_others: "Show my real name to other %{service_name} users"
       sign_up: "Create a new %{service_name} account"
-      terms: "terms of use"
+      terms: "Terms of Use"
+      privacy: "Privacy Policy"
       username_is_in_use: "This username is already in use."
       username_is_invalid: "Username is invalid. Allowed characters are letters, numbers and underscore."
       visible_only_to_you: "visible only to you and the %{service_name} team"
@@ -2066,9 +2098,10 @@ en:
       delete_account_confirmation_popup: "Are you sure you really want to delete your user account and permanently lose all data related to it? Account deletion cannot be reversed."
       email_addresses: "Email addresses"
       new_email: "New email address"
-      delete_personal_information: "If you delete your account, your personal information (name, phone number, address, email, profile picture, etc.) will be deleted permanently and can't be recovered. All the listings you have created will be removed. You won't be able to reactivate your account."
+      delete_personal_information: "If you delete your account, your personal information (name, phone number, address, email, profile picture, etc.) will be deleted permanently and can't be recovered. All the listings you have created will be removed. You won't be able to reactivate your account. Your username will become available for others to register on %{service_name}."
       delete_information_others_involved: "Information where other members are involved (conversations with other people, transactions you've made, reviews you've given to others, etc) is not removed when you delete your account. However, your name will no longer be displayed next to this information."
       unfinished_transactions: "Your account can't be deleted because you have ongoing transactions. Please complete all transactions before deleting your account."
+      only_admin: "Your account can't be deleted because you are the only administrator of the marketplace."
       new_password: "New password"
       save: Save
       these_fields_are_shown_only_to_you: "Username is shown in your profile unless you have given your name. Other information is only shown to you."
@@ -2088,7 +2121,7 @@ en:
         status_confirmed: Confirmed
         status_pending: Pending
     notifications:
-      email_from_admins: "I'm willing to receive occasional emails from the administrators"
+      email_from_admins: "I accept to receive occasional emails from the %{service_name} team"
       i_want_to_get_email_notification_when: "I want to get an email notification when..."
       newsletters: "Emails from administrators"
       community_updates: Newsletters
@@ -2417,12 +2450,15 @@ en:
       need_info: "We need some information about you to be able to send you money."
       select_country: "Select country..."
       legal_name: "Legal name"
+      first_name: "First name"
+      last_name: "Last name"
       country: Country
       birth_date: "Birth date"
       ssn_last_4: "SSN Last 4"
       personal_id_number: "Personal ID number"
       address_country: Country
       address_state: State
+      address_province: Province
       address_city: City
       address_postal_code: "Postal code"
       address_line1: "Street address"
@@ -2437,6 +2473,7 @@ en:
       bank_routing_1: "Bank code"
       bank_routing_2: "Branch code"
       bank_currency: "Bank account currency"
+      update_also_bank_account: "Update also Bank account"
       messages:
         account_number: "Account number"
         routing_number: "Routing number"

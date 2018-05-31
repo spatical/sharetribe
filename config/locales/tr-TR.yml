@@ -257,6 +257,7 @@ tr-TR:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: ~
         description_roadmap_new: ~
@@ -280,6 +281,7 @@ tr-TR:
         invalid_facebook_connect_id: "Müşteri kimliği sadece rakam içerebilir."
         facebook_connect_secret: "Facebook müşteri gizli anahtarı"
         invalid_facebook_connect_secret: "Gizli anahtar sadece rakam ve A-F arası harfleri içerebilir."
+        enable_facebook_login: ~
         save: "Ayarları kaydet"
       analytics:
         analytics: Analytics
@@ -287,6 +289,10 @@ tr-TR:
         google_analytics_key_info_text: "Google Analytics hesabınızın takip kimliği"
         google_analytics_key_info_text_with_instructions: "Google Analytics hesabınızın izleme kodu: %{instructions_link}"
         google_analytics_instructions_link_text: "Google Analytics kurulumu hakkında daha fazla bilgi edinin."
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: "Ayarları kaydet"
       menu_links:
         menu_links: "Menü bağlantıları"
@@ -367,6 +373,21 @@ tr-TR:
           other_party: ~
         participants: ~
         profile: ~
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: "'%{field_name}' listeleme alanını düzenle"
@@ -624,11 +645,17 @@ tr-TR:
         payments_not_enabled: ~
     transaction_types:
       sell: Satmak
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: "Kiraya vermek"
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: "Hediye etmek"
       lend: "Ödünç vermek"
       swap: Takas
       service: "Teklif etmek"
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: "Talep etmek"
       inquiry: Sorgulama
       share_for_free: "Bedelsiz paylaşım"
@@ -1124,6 +1151,8 @@ tr-TR:
       reject_authorization_error: "izin verilmiş PayPal ödemesini reddederken bir hata meydana geldi. Lütfen tekrar deneyin."
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: "Anasayfaya dön"
     error_404:
@@ -1514,6 +1543,7 @@ tr-TR:
       listing_author_payment_details_missing: "Bu listelemenin sahibi ödeme bilgilerini eklemediği için şu an ödeme alamıyor. Lütfen ilan sahibine veya bize ulaşın."
       images_are_processing: ~
       automatically_logged_out_please_sign_in: "Oturumunuzun süresi doldu, lütfen tekrar giriş yapın."
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: Hesap
       notifications: Bildirimler
@@ -1931,7 +1961,8 @@ tr-TR:
         other: "%{service_name}'e erişim sınırlandırılmıştır. Katılım izniniz olduğunu gösteren bir e-posta adresine sahip olmalısınız."
       family_name: Soyad
       given_name: Ad
-      i_accept_the: "Okudum ve Kabul ediyorum:"
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: "Zaman zaman %{service_name} takım üyelerinden e-mailler alacağımı kabul ediyorum ve fikrimi istedim zaman değiştirebileceğimi anladım."
       invalid_invitation_code: "Davet kodu geçerli değil."
       invitation_code: "Davet kodu"
       not_required: ", gerekmemektedir"
@@ -1940,6 +1971,7 @@ tr-TR:
       show_my_name_to_others: "Diğer %{service_name} kullanıcılarına gerçek adımı göster"
       sign_up: "Yeni %{service_name} hesabı oluştur."
       terms: "Kullanım Koşulları"
+      privacy: ~
       username_is_in_use: "Bu kullanıcı adı kullanımdadır."
       username_is_invalid: "Kullanıcı adı geçersiz. Kullanıcı adı harf, rakam ve altçizgiden oluşabilir."
       visible_only_to_you: "yalnızca siz ve pazaryeri yöneticisi görebilir"
@@ -2044,6 +2076,7 @@ tr-TR:
       delete_personal_information: "Hesabınızı sildiğinizde kişisel bilgileriniz (ad, telefon, adres, eposta, profil fotoğrafı) geri getirilmeyecek şekilde silinecektir. Oluşturduğunuz bütün listelemeler silinecek ve hesabınızı tekrar aktif hale getiremeyeceksiniz."
       delete_information_others_involved: "Diğer üyeleri içeren site aktiviteleriniz (yazışmalarınız, yaptığınız işlemler, yorumlarınız vb.) silinmeyecektir. Ama isminiz yayınlanmayacaktır."
       unfinished_transactions: "Hali hazırda aktif listelemeleriniz olduğu için hesabınızı silemiyoruz. Bütün işlemler tamamlandıktan sonra lütfen tekrar deneyiniz."
+      only_admin: ~
       new_password: "Yeni şifre"
       save: Kaydet
       these_fields_are_shown_only_to_you: "Adınızı vermediyseniz profilinizde kullanıcı adınız görünür. Diğer bilgilerinizi yalnızca siz görüntüleyebilirsiniz."
@@ -2358,12 +2391,15 @@ tr-TR:
       need_info: ~
       select_country: ~
       legal_name: ~
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: ~
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2378,6 +2414,7 @@ tr-TR:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2402,6 +2439,7 @@ tr-TR:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:

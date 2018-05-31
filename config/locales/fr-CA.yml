@@ -260,6 +260,7 @@ fr-CA:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: ~
         description_roadmap_new: ~
@@ -283,6 +284,7 @@ fr-CA:
         invalid_facebook_connect_id: "L'id client ne devrait contenir que des chiffres"
         facebook_connect_secret: "Clé secrète Facebook"
         invalid_facebook_connect_secret: "La clé secrète ne devrait contenir que des chiffres et des lettre de a à f."
+        enable_facebook_login: ~
         save: "Sauvegarder les paramètres"
       analytics:
         analytics: Analyses
@@ -290,6 +292,10 @@ fr-CA:
         google_analytics_key_info_text: "Identifiant du code de suivi de votre compte Google Analytics."
         google_analytics_key_info_text_with_instructions: "Identifiant du code de suivi de votre compte Google Analytics. %{instructions_link}."
         google_analytics_instructions_link_text: "En savoir plus sur la connexion avec Google Analytics."
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: "Sauvegarder les paramètres"
       menu_links:
         menu_links: "Liens du menu"
@@ -370,6 +376,21 @@ fr-CA:
           other_party: ~
         participants: ~
         profile: ~
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: "Modifier le champ d'annonce '%{field_name}'"
@@ -627,11 +648,17 @@ fr-CA:
         payments_not_enabled: ~
     transaction_types:
       sell: Vente
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: Location
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: Don
       lend: Prêt
       swap: Échange
       service: Offre
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: Demande
       inquiry: Information
       share_for_free: "Partage gratuit"
@@ -1126,6 +1153,8 @@ fr-CA:
       reject_authorization_error: "Une erreur s'est produite lors de la tentative de rejet du paiement PayPal avec pré-autorisation. Veuillez essayer de nouveau."
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: "Retourner sur la page d'accueil"
     error_404:
@@ -1516,6 +1545,7 @@ fr-CA:
       listing_author_payment_details_missing: "L'auteur de cette annonce n'a pas ajouté ses détails de paiement et ne peut pas recevoir de paiement actuellement. Merci de contacter l'auteur de l'annonce."
       images_are_processing: ~
       automatically_logged_out_please_sign_in: ~
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: Compte
       notifications: Notifications
@@ -1934,7 +1964,8 @@ fr-CA:
         other: "L'accès à %{service_name} est limité. Pour en être membre, vous devez avoir une adresse email autorisée."
       family_name: Nom
       given_name: Prénom
-      i_accept_the: "J'accepte les"
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: ~
       invalid_invitation_code: "Le code d'invitation n'est pas valide."
       invitation_code: "Code d'invitation"
       not_required: ", pas demandé"
@@ -1943,6 +1974,7 @@ fr-CA:
       show_my_name_to_others: "Montrer mon nom complet aux autres utilisateurs de %{service_name}"
       sign_up: "Créer un nouveau compte sur %{service_name}"
       terms: "conditions d'utilisation"
+      privacy: ~
       username_is_in_use: "Ce nom d'utilisateur est déjà utilisé."
       username_is_invalid: "Nom d'utilisateur incorrect. Les caractères autorisés sont les lettres, les chiffres et le tiret bas ('_')."
       visible_only_to_you: "visible uniquement par vous et l'administrateur de la place de marché"
@@ -2047,6 +2079,7 @@ fr-CA:
       delete_personal_information: "Si vous supprimez votre compte, vos informations personnelles (nom, numéro de téléphone, adresse, email, photo de profil, etc...) seront supprimées définitivement et ne pourront être récupérées. Toutes les annonces que vous avez créées seront supprimées du site. Vous ne pourrez pas réactiver votre compte."
       delete_information_others_involved: "Les informations impliquant d'autres membres (conversations avec d'autres personnes, transactions que vous avez réalisées, avis que vous avez donné à d'autres, etc...) ne sont pas supprimés quand vous supprimez votre compte. Cependant, votre nom n'apparaîtra pas à côté de ces informations."
       unfinished_transactions: "Votre compte ne peut être supprimé car vous avez des transactions en cours. Veuillez terminer vos transactions avant de supprimer votre compte."
+      only_admin: ~
       new_password: "Votre nouveau mot de passe"
       save: Sauvegarder
       these_fields_are_shown_only_to_you: "Le nom d'utilisateur apparaît dans votre profil sauf si vous avez communiqué votre nom. Il n'y a que vous qui voyez les autres informations."
@@ -2356,12 +2389,15 @@ fr-CA:
       need_info: ~
       select_country: ~
       legal_name: ~
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: ~
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2376,6 +2412,7 @@ fr-CA:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2400,6 +2437,7 @@ fr-CA:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:

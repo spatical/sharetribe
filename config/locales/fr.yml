@@ -253,13 +253,14 @@ fr:
         save_user_status_successful: Sauvegardé
         export_all_as_csv: "Exporter au format CSV"
         save_user_status_error: "La sauvegarde a échoué. Veuillez rafraîchir la page et essayer de nouveau."
-        ban_user_confirmation: "Ceci bannit l'utilisateur de la place de marché et l'empêche d’y accéder de nouveau avec ce compte. Voulez-vous vraiment faire cela ?"
+        ban_user_confirmation: "Ceci bannit l'utilisateur de la place de marché et l'empêche d’y accéder de nouveau avec ce compte. Voulez-vous vraiment continuer ?"
         unban_user_confirmation: "Cela stoppe le bannissement de l'utilisateur dans la place de marché et lui permet d'accéder au site de nouveau avec ce compte. Voulez-vous vraiment continuer ?"
         ban_me_error: "Vous ne pouvez pas vous bannir vous-même."
         search: Rechercher
         search_by_name_email: "Rechercher un nom, un email ou un nom d'affichage"
         reset_search: "Voir tous"
         for_search_terms: "pour : %{terms}"
+        this_makes_the_user_an_admin: "Ce membre va devenir un administrateur. Vous devriez l'en informer, lui rappeler ses responsabilités et leur demander de lire les conditions d'utilisations de Sharetribe. Voulez-vous vraiment continuer ?"
       new_layout:
         new_layout: "Nouveau design"
         description_roadmap_new: "Lorsque de nouveaux éléments de design sont disponibles pour votre place de marché, vous pouvez choisir de les utiliser sans attendre ou bien de continuer à utiliser les anciens. Vous pouvez modifier votre choix à tout moment depuis cette page. Il est préférable de toujours utiliser les versions les plus récentes, puisque les anciens éléments seront rendus obsolètes à un moment. Si un élément que vous utilisez devenait obsolète, vous serez contacté au préalable."
@@ -283,6 +284,7 @@ fr:
         invalid_facebook_connect_id: "L'id client ne devrait contenir que des chiffres"
         facebook_connect_secret: "Clé secrète Facebook"
         invalid_facebook_connect_secret: "La clé secrète ne devrait contenir que des chiffres et des lettre de a à f."
+        enable_facebook_login: "Permettre aux utilisateurs de se connecter avec leur compte Facebook"
         save: "Sauvegarder les paramètres"
       analytics:
         analytics: Analyses
@@ -290,6 +292,10 @@ fr:
         google_analytics_key_info_text: "Identifiant du code de suivi de votre compte Google Analytics."
         google_analytics_key_info_text_with_instructions: "Identifiant du code de suivi de votre compte Google Analytics. %{instructions_link}."
         google_analytics_instructions_link_text: "En savoir plus sur la connexion avec Google Analytics"
+        sharetribe_analytics: "Analyses Sharetribe"
+        sharetribe_analytics_info_text_with_instructions: "Pour améliorer le service et support, Sharetribe suit l'activité des membres de cette place de marché. Aucune information personnelle n'est collectée et les informations ne sont pas partagés en dehors de l'équipe Sharetribe. Ce suivi peut être totalement désactivé. %{instructions_link}"
+        sharetribe_analytics_instructions_link_text: "En apprendre plus sur les analyses Sharetribe."
+        end_user_analytics: "Autoriser Sharetribe à suivre l'activité des membres pour améliorer le service Sharetribe"
         save: "Sauvegarder les paramètres"
       menu_links:
         menu_links: "Liens du menu"
@@ -370,6 +376,21 @@ fr:
           other_party: "Autre participant"
         participants: "Conversation : %{starter} avec %{author}"
         profile: "Profil de %{author}"
+      testimonials:
+        testimonials: "Voir les avis"
+        no_testimonials_found: "Aucun avis trouvé"
+        displaying_xx_reviews: "Affichage de <b>%{count}</b> avis pour les transactions %{tx_from} - %{tx_to} sur un total de <b>%{all_count}</b> avis."
+        headers:
+          transaction: Transaction
+          author: Auteur
+          receiver: Destinataire
+          status: Statut
+          grade: Note
+          note: Commentaire
+        status:
+          waiting: "En attente"
+          skipped: Ignorée
+          published: Publiée
     custom_fields:
       edit:
         edit_listing_field: "Modifier le champ d'annonce '%{field_name}'"
@@ -643,11 +664,17 @@ fr:
         payments_not_enabled: "Le système de paiement n'est pas activé dans votre place de marché"
     transaction_types:
       sell: Vente
+      sell_w_online_payment: "Vente avec paiement en ligne"
+      sell_wo_online_payment: "Vente sans paiement en ligne"
       rent: Location
+      rent_w_online_payment: "Location avec paiement en ligne"
+      rent_wo_online_payment: "Location sans paiement en ligne"
       give: Don
       lend: Prêt
       swap: Échange
       service: Offre
+      service_w_online_payment: "Offre avec paiement en ligne"
+      service_wo_online_payment: "Offre sans paiement en ligne"
       request: Demande
       inquiry: Information
       share_for_free: "Partage gratuit"
@@ -709,7 +736,7 @@ fr:
       title: "Commission et frais de transactions"
       stripe: Stripe
       paypal: PayPal
-      info: "Les paiements sur %{service_name} sont gérés les plateformes de paiement listées ci-dessous. %{service_name} facture une commission qui diffère selon la plateforme de paiement utilisée. Cette dernière peut également facture des frais pour chaque paiement, comme décrit ci-dessous."
+      info: "Les paiements sur %{service_name} sont gérés par les plateformes de paiement listées ci-dessous. %{service_name} facture une commission qui peut diffèrer selon la plateforme de paiement utilisée. Cette dernière peut également facture des frais pour chaque paiement, comme décrit ci-dessous."
     paypal_fee_info:
       title: "Frais de transaction PayPal"
       body_text: |-
@@ -790,7 +817,7 @@ fr:
       rejected_offer: "a refusé l'offre"
       confirmed_request: "a marqué la commande comme réalisée"
       confirmed_offer: "a marqué l'offre comme réalisée"
-      canceled_request: "a annulé la commande"
+      canceled_request: "A annulé la commande"
       canceled_offer: "a annulé l'offre"
       paid: "a payé %{sum}"
       payment_preauthorized: "Paiement autorisé : %{sum}"
@@ -944,7 +971,7 @@ fr:
         has_marked_request_as_confirmed: "%{other_party_full_name} a confirmé la commande à propos de %{request} comme réalisée. Le paiement de cette transaction a maintenant été transféré vers votre compte en banque. Vous pouvez laisser un avis sur %{other_party_given_name}."
     transaction_automatically_confirmed:
       subject: "Commande automatiquement signalée comme terminée - n'oubliez pas de donner un avis"
-      we_have_marked_request_as_confirmed: "Nous avons signalé la commande de '%{request}' comme terminée. La commande a été terminée automatiquement car %{days_passed} se sont écoulés depuis que la demande a été acceptée."
+      we_have_marked_request_as_confirmed: "Nous avons marqué la commande de '%{request}' comme réalisée. La commande a été marquée comme réalisée automatiquement car %{days_passed} jours se sont écoulés depuis que la demande a été acceptée."
     booking_transaction_automatically_confirmed:
       subject: "Commande automatiquement signalée comme terminée - n'oubliez pas de donner un avis"
       we_have_marked_request_as_confirmed: "Nous avons signalé la commande de '%{request}' comme réalisée. La demande a été automatiquement réalisée car une journée s'est écoulée depuis la fin de la période de réservation."
@@ -1144,6 +1171,8 @@ fr:
       reject_authorization_error: "Une erreur s'est produite lors de la tentative de rejet du paiement PayPal avec pré-autorisation. Veuillez essayer de nouveau."
     stripe:
       generic_error: "Une erreur s'est produite durant le paiement. Le paiement Stripe n'a pu être finalisé."
+      accept_authorization_error: "Une erreur s'est produite en essayant d'accepter le paiement préautorisé par Stripe. Veuillez essayer de nouveau."
+      reject_authorization_error: "Une erreur s'est produite en essayant de rejeter le paiement préautorisé par Stripe. Veuillez essayer de nouveau."
   error_pages:
     back_to_kassi_front_page: "Retourner sur la page d'accueil"
     error_404:
@@ -1538,6 +1567,7 @@ fr:
         one: "Le site sera inaccessible pour maintenance dans %{count} minute"
         other: "Le site sera inaccessible pour maintenance dans %{count} minutes"
       automatically_logged_out_please_sign_in: "Vous avez été déconnecté automatiquement. Veuillez vous connecter de nouveau."
+      stripe_you_account_balance_is_not_0: "Le solde de votre compte n'est pas nul, il ne peut donc pas être supprimé. Cela peut être car vous avez des transactions non encore réalisées ou bien des paiements vers votre compte en banque sont en attente. Veuillez contacter l'équipe %{service_name} pour en savoir plus."
     settings:
       account: Compte
       notifications: Notifications
@@ -1956,7 +1986,8 @@ fr:
         other: "L'accès à %{service_name} est limité. Pour en être membre, vous devez avoir une adresse email autorisée."
       family_name: Nom
       given_name: Prénom
-      i_accept_the: "J'accepte les"
+      i_accept_the_terms_and_privacy: "J'accepte les %{privacy} et les règles de %{terms}"
+      admin_emails_consent: "J'accepte de recevoir occasionnellement des messages de l'équipe %{service_name} et je comprends que je peux changer d'avis à tout moment"
       invalid_invitation_code: "Le code d'invitation n'est pas valide."
       invitation_code: "Code d'invitation"
       not_required: ", pas demandé"
@@ -1965,6 +1996,7 @@ fr:
       show_my_name_to_others: "Montrer mon nom complet aux autres utilisateurs de %{service_name}"
       sign_up: "Créer un nouveau compte sur %{service_name}"
       terms: "conditions d'utilisation"
+      privacy: "vie privée"
       username_is_in_use: "Ce nom d'utilisateur est déjà utilisé."
       username_is_invalid: "Nom d'utilisateur incorrect. Les caractères autorisés sont les lettres, les chiffres et le tiret bas ('_')."
       visible_only_to_you: "visible uniquement par vous et l'équipe %{service_name}"
@@ -2066,9 +2098,10 @@ fr:
       delete_account_confirmation_popup: "Voulez-vous vraiment supprimer votre compte et en perdre toutes ses données ? La suppression d'un compte est irréversible."
       email_addresses: "Adresses email"
       new_email: "Nouvelle adresse email"
-      delete_personal_information: "Si vous supprimez votre compte, vos informations personnelles (nom, numéro de téléphone, adresse, email, photo de profil, etc...) seront supprimées définitivement et ne pourront être récupérées. Toutes les annonces que vous avez créées seront supprimées du site. Vous ne pourrez pas réactiver votre compte."
+      delete_personal_information: "Si vous supprimez votre compte, vos informations personnelles (nom, numéro de téléphone, adresse, email, photo de profil, etc...) seront supprimées définitivement et ne pourront être récupérées. Toutes les annonces que vous avez créées seront supprimées du site. Vous ne pourrez pas réactiver votre compte. Votre nom d'utilisateur pourra être utilisé sur %{service_name} par quelqu'un d'autre."
       delete_information_others_involved: "Les informations impliquant d'autres membres (conversations avec d'autres personnes, transactions que vous avez réalisées, avis que vous avez donné à d'autres, etc...) ne sont pas supprimés quand vous supprimez votre compte. Cependant, votre nom n'apparaîtra pas à côté de ces informations."
       unfinished_transactions: "Votre compte ne peut être supprimé car vous avez des transactions en cours. Veuillez terminer vos transactions avant de supprimer votre compte."
+      only_admin: "Votre compte ne peut être supprimé car vous êtes le seul administrateur de la place de marché."
       new_password: "Votre nouveau mot de passe"
       save: Sauvegarder
       these_fields_are_shown_only_to_you: "Le nom d'utilisateur apparaît dans votre profil sauf si vous avez communiqué votre nom. Il n'y a que vous qui voyez les autres informations."
@@ -2088,7 +2121,7 @@ fr:
         status_confirmed: Confirmé
         status_pending: "En attente"
     notifications:
-      email_from_admins: "J'accepte de recevoir occasionnellement des messages des administrateurs"
+      email_from_admins: "J'accepte de recevoir occasionnellement des messages de l'équipe %{service_name}"
       i_want_to_get_email_notification_when: "Je souhaite recevoir un email de notification lorsque..."
       newsletters: "Emails de la part des administrateurs"
       community_updates: Newsletters
@@ -2415,12 +2448,15 @@ fr:
       need_info: "Nous avons besoin de quelques informations pour pouvoir vous transférer votre argent."
       select_country: "Choisir un pays..."
       legal_name: "Nom complet (Prénom Nom)"
+      first_name: Prénom
+      last_name: Nom
       country: Pays
       birth_date: "Date de naissance"
       ssn_last_4: "Derniers 4 chiffres SSN"
       personal_id_number: "Numéro d'identifiant personnel"
       address_country: Pays
       address_state: Etat
+      address_province: Province
       address_city: Ville
       address_postal_code: "Code postal"
       address_line1: Adresse
@@ -2435,6 +2471,7 @@ fr:
       bank_routing_1: "Code banque"
       bank_routing_2: "Code branche"
       bank_currency: "Devise du compte en banque"
+      update_also_bank_account: "Mettre à jour le numéro de compte bancaire"
       messages:
         account_number: "Numéro de compte"
         routing_number: "Numéro de routing"
@@ -2459,6 +2496,7 @@ fr:
     form_pin:
       social_insurance_number: "Numéro d'Assurance Sociale (NAS)"
       social_security_number: "Numéro de Sécurité Sociale (SSN)"
+      ssn_last_4: "Quatre derniers chiffres du numéro de sécurité sociale (SSN)"
       hong_kong_identity_card: "Numéro de carte d'identité de Hong Kong (HKID)"
       singapore_identity_card: "National Registration Identity Card (NRIC) ou Foreign Identification Number (FIN)"
       messages:

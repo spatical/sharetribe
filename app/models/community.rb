@@ -89,6 +89,7 @@
 #  small_cover_photo_processing               :boolean
 #  favicon_processing                         :boolean
 #  deleted                                    :boolean
+#  end_user_analytics                         :boolean          default(TRUE)
 #
 # Indexes
 #
@@ -618,6 +619,10 @@ class Community < ApplicationRecord
     supported << :paypal if PaypalHelper.paypal_active?(self.id)
     supported << :stripe if StripeHelper.stripe_active?(self.id)
     supported.size > 1 ? supported : supported.first
+  end
+
+  def is_person_only_admin(person)
+    admins.count == 1 && admins.first == person
   end
 
   private

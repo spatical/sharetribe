@@ -245,6 +245,7 @@ es:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: ~
         description_roadmap_new: ~
@@ -268,6 +269,7 @@ es:
         invalid_facebook_connect_id: ~
         facebook_connect_secret: ~
         invalid_facebook_connect_secret: ~
+        enable_facebook_login: ~
         save: ~
       analytics:
         analytics: ~
@@ -275,6 +277,10 @@ es:
         google_analytics_key_info_text: ~
         google_analytics_key_info_text_with_instructions: ~
         google_analytics_instructions_link_text: ~
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: ~
       menu_links:
         menu_links: ~
@@ -355,6 +361,21 @@ es:
           other_party: ~
         participants: ~
         profile: ~
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: ~
@@ -612,11 +633,17 @@ es:
         payments_not_enabled: ~
     transaction_types:
       sell: Venta
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: Alquilando
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: Regalando
       lend: Prestando
       swap: Intercambio
       service: Oferta
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: Solicitando
       inquiry: ~
       share_for_free: "Compartido gratuitamente"
@@ -1116,6 +1143,8 @@ es:
       reject_authorization_error: ~
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: "Volver a la página principal"
     error_404:
@@ -1506,6 +1535,7 @@ es:
       listing_author_payment_details_missing: ~
       images_are_processing: ~
       automatically_logged_out_please_sign_in: ~
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: Cuenta
       notifications: Notificaciones
@@ -1924,7 +1954,8 @@ es:
         other: "Esta comunidad es sólo para %{community_name}. Para unirte necesitas un email que tenga una de los siguientes direcciones: %{allowed_emails}."
       family_name: "Apellido:"
       given_name: "Nombre:"
-      i_accept_the: "Acepto los"
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: ~
       invalid_invitation_code: "El código de invitación no es válido."
       invitation_code: "Código de invitación:"
       not_required: ", no es necesario"
@@ -1933,6 +1964,7 @@ es:
       show_my_name_to_others: "Mostrar mi nombre real a otros usuarios de %{service_name}"
       sign_up: "Crear una nueva cuenta en %{service_name}"
       terms: "Términos de uso"
+      privacy: ~
       username_is_in_use: "El nombre de usuario ingresado ya está en uso."
       username_is_invalid: "Nombre de usuario no válido. Los caracteres permitidos son letras, números y guión bajo."
       visible_only_to_you: "visible solamente para ti y el administrador de la comunidad"
@@ -2037,6 +2069,7 @@ es:
       delete_personal_information: ~
       delete_information_others_involved: ~
       unfinished_transactions: ~
+      only_admin: ~
       new_password: "Nueva contraseña"
       save: Guardar
       these_fields_are_shown_only_to_you: "El nombre del usuario se muestra en tu perfil a menos que hayas dado tu nombre. Cualquier otra información sólo está disponible para ti."
@@ -2333,12 +2366,15 @@ es:
       need_info: ~
       select_country: ~
       legal_name: ~
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: ~
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2353,6 +2389,7 @@ es:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2377,6 +2414,7 @@ es:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:

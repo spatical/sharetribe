@@ -255,6 +255,7 @@ ja:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: ~
         description_roadmap_new: ~
@@ -278,6 +279,7 @@ ja:
         invalid_facebook_connect_id: ユーザーIDは数字のみで構成されています
         facebook_connect_secret: フェイスプックユーザーの秘密
         invalid_facebook_connect_secret: フェイスプックユーザーの秘密は、数字とアルファベットaからｆを含むものです。
+        enable_facebook_login: ~
         save: 設定を保存する
       analytics:
         analytics: アナリティクス
@@ -285,6 +287,10 @@ ja:
         google_analytics_key_info_text: "Google アナリティクスアカウントの トラッキング コード"
         google_analytics_key_info_text_with_instructions: "お持ちのGoogle アナリティクスのトラッキング コード。%{instructions_link}。"
         google_analytics_instructions_link_text: "Google アナリティクスを接続についてさらに読む"
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: 設定を保存する
       menu_links:
         menu_links: メニューにリンクを追加
@@ -365,6 +371,21 @@ ja:
           other_party: ~
         participants: ~
         profile: ~
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: "「%{field_name}」項目を編集する"
@@ -628,11 +649,17 @@ ja:
         payments_not_enabled: ~
     transaction_types:
       sell: 売ります
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: 貸します
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: あげます
       lend: 無料で貸します
       swap: 交換したいです
       service: オファーします
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: リクエストします
       inquiry: 質問します
       share_for_free: 無料でシェアします
@@ -1127,6 +1154,8 @@ ja:
       reject_authorization_error: 事前に指定したPaypal口座からの自動引き落とし手続き中にエラーが発生しました。再度お手続きをしてください。
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: 前のページに戻る
     error_404:
@@ -1520,6 +1549,7 @@ ja:
         zero: メンテナンスのため、このウェブサイトは只今より一時的にオフラインになります
         other: "このウェブサイトはメンテナンスのため%{count}分後にオフラインになります"
       automatically_logged_out_please_sign_in: セッションの期限が切れました。もう一度ログインしてください
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: ご登録情報
       notifications: メール通知
@@ -1937,7 +1967,8 @@ ja:
         other: "%{service_name}へのアクセスが制限されました。参加しなおすには、ご登録時のメールアドレスが必要です。"
       family_name: 姓
       given_name: 名
-      i_accept_the: 利用規約に同意します
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: ~
       invalid_invitation_code: その招待コードは無効です。
       invitation_code: 招待コード
       not_required: 、必要ありません
@@ -1946,6 +1977,7 @@ ja:
       show_my_name_to_others: "%{service_name}内の他のユーザーに私の本名を表示する"
       sign_up: "%{service_name}に新規登録する"
       terms: 利用規約
+      privacy: ~
       username_is_in_use: そのユーザ名はすでに使用されています。
       username_is_invalid: 無効なユーザ名です。文字と数字とアンダーバーが使用可能です。
       visible_only_to_you: あなただけに表示されるマーケットプレイスの管理ページ
@@ -2050,6 +2082,7 @@ ja:
       delete_personal_information: "アカウントを削除すると、個人情報 (名前、電話番号、住所、メールアドレス、プロフィール写真など) は永久に削除され、取り戻すことは出来なくなります。すべての作成された投稿も削除されます。アカウントの復旧はできません。"
       delete_information_others_involved: （他のユーザとの会話などの）付随するその他の情報、お取引履歴、レビューなどはあなたのアカウント削除お手続きのとき、すべて削除されます。次のステップに進むということは、あなたのお名前も、サイト上に表示されなくなります。
       unfinished_transactions: まだやりとりが完了がしていないお取引があるため、削除が出来ないようです。削除前に、すべてのお取引を最後まで完了させてください。
+      only_admin: ~
       new_password: 新しいパスワード
       save: 保存
       these_fields_are_shown_only_to_you: ユーザ名はあなたの名前を公表している場合を除いて、あなたのプロフィールに表示されます。他の情報はあなただけに表示されています。
@@ -2362,12 +2395,15 @@ ja:
       need_info: ~
       select_country: ~
       legal_name: ~
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: ~
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2382,6 +2418,7 @@ ja:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2406,6 +2443,7 @@ ja:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:

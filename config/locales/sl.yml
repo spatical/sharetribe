@@ -245,6 +245,7 @@ sl:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: ~
         description_roadmap_new: ~
@@ -268,6 +269,7 @@ sl:
         invalid_facebook_connect_id: ~
         facebook_connect_secret: ~
         invalid_facebook_connect_secret: ~
+        enable_facebook_login: ~
         save: ~
       analytics:
         analytics: ~
@@ -275,6 +277,10 @@ sl:
         google_analytics_key_info_text: ~
         google_analytics_key_info_text_with_instructions: ~
         google_analytics_instructions_link_text: ~
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: ~
       menu_links:
         menu_links: ~
@@ -355,6 +361,21 @@ sl:
           other_party: ~
         participants: ~
         profile: ~
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: ~
@@ -612,11 +633,17 @@ sl:
         payments_not_enabled: ~
     transaction_types:
       sell: ~
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: ~
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: ~
       lend: ~
       swap: ~
       service: ~
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: ~
       inquiry: ~
       share_for_free: ~
@@ -1109,6 +1136,8 @@ sl:
       reject_authorization_error: ~
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: ~
     error_404:
@@ -1499,6 +1528,7 @@ sl:
       listing_author_payment_details_missing: ~
       images_are_processing: ~
       automatically_logged_out_please_sign_in: ~
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: Račun
       notifications: Obvestila
@@ -1914,7 +1944,8 @@ sl:
       invalid_username_or_email: ~
       family_name: Priimek
       given_name: Ime
-      i_accept_the: Sprejmem
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: ~
       invalid_invitation_code: "Ta koda povabiila ni veljavna."
       invitation_code: "Koda povabila"
       not_required: ~
@@ -1923,6 +1954,7 @@ sl:
       show_my_name_to_others: ~
       sign_up: "Kreiraj nov %{service_name} uporabniški račun"
       terms: "pogoji poslovanja"
+      privacy: ~
       username_is_in_use: "To uporabniško ime je že v uporabi."
       username_is_invalid: "Uporabniško ime ni veljavno. Dovoljene so samo črke, številke in podčrtaj."
       visible_only_to_you: ~
@@ -2027,6 +2059,7 @@ sl:
       delete_personal_information: "Če izbrišeš svoj uporabniški račun, se bojo vse tvoje osebne informacije (ime, telefon, e-naslov, profilna fotografija itd.) izbrisale trajno in jih ne bo možno ponovno obnoviti. Tudi vse tvoje objave bojo odstranjene. Računa ne boš mogel obnoviti sam."
       delete_information_others_involved: ~
       unfinished_transactions: ~
+      only_admin: ~
       new_password: "Novo geslo"
       save: Shrani
       these_fields_are_shown_only_to_you: ~
@@ -2320,12 +2353,15 @@ sl:
       need_info: ~
       select_country: ~
       legal_name: ~
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: ~
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2340,6 +2376,7 @@ sl:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2364,6 +2401,7 @@ sl:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:

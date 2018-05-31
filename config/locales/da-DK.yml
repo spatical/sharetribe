@@ -260,6 +260,7 @@ da-DK:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: "Nyt layout"
         description_roadmap_new: ~
@@ -283,6 +284,7 @@ da-DK:
         invalid_facebook_connect_id: "Client id skal kun indeholde tal."
         facebook_connect_secret: "Facebook client secret"
         invalid_facebook_connect_secret: "Client secret skal kun indehold tal og bogstaver fra a til f."
+        enable_facebook_login: ~
         save: Gem
       analytics:
         analytics: Analytics
@@ -290,6 +292,10 @@ da-DK:
         google_analytics_key_info_text: "Tracking ID til din Google Analytics konto."
         google_analytics_key_info_text_with_instructions: "Tracking ID til din Google Analytics konto. %{instructions_link}."
         google_analytics_instructions_link_text: "Læs mere om tilknytning af Google Analytics"
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: Gem
       menu_links:
         menu_links: "Links i menuen"
@@ -370,6 +376,21 @@ da-DK:
           other_party: ~
         participants: ~
         profile: ~
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: "Rediger annoncefelt '%{field_name}'"
@@ -639,11 +660,17 @@ da-DK:
         payments_not_enabled: ~
     transaction_types:
       sell: Sælger
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: Udlejer
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: "Giver væk"
       lend: Udlåner
       swap: Bytter
       service: Tilbyder
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: Anmoder
       inquiry: Forespørgsel
       share_for_free: "Deler gratis"
@@ -1138,6 +1165,8 @@ da-DK:
       reject_authorization_error: "Der skete en fejl da vi prøvede at afvise PayPal betalingen. Prøv venligst igen."
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: "Tilbage til forsiden"
     error_404:
@@ -1532,6 +1561,7 @@ da-DK:
         one: "Dette website vil være offline for vedligeholdelse i %{count} minut"
         other: "Dette website vil være offline for vedligeholdelse i %{count} minutter"
       automatically_logged_out_please_sign_in: "Du er blevet automatisk logget ud. Log venligst ind igen."
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: Konto
       notifications: Notifikationer
@@ -1950,7 +1980,8 @@ da-DK:
         other: "Du har ikke adgang til serveren %{service_name}. For at få adgang skal du bruge en godkendt emailadresse."
       family_name: Efternavn
       given_name: Fornavn
-      i_accept_the: "Jeg accepterer"
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: ~
       invalid_invitation_code: "Invitationskode er ikke gyldig."
       invitation_code: Invitationskode
       not_required: ", ikke nødvendig."
@@ -1959,6 +1990,7 @@ da-DK:
       show_my_name_to_others: "Vis mit rigtige navn til andre %{service_name} brugere"
       sign_up: "Opret ny %{service_name} konto"
       terms: Brugervilkår
+      privacy: ~
       username_is_in_use: "Dette brugernavn er allerede i brug."
       username_is_invalid: "Brugernavn er ugyldig. Tilladte tegn er bogstaver, tal og understregning."
       visible_only_to_you: "kun synlige for dig og markedspladsens admin"
@@ -2063,6 +2095,7 @@ da-DK:
       delete_personal_information: "Hvis du sletter din konto, vil dine personlige oplysninger (navn, telefonnummer, adresse, email, profilbillede osv.) blive fjernet permanent og kan ikke gendannes. Alle dine annoncer vil blive slettet. Du kan ikke genaktivere kontoen."
       delete_information_others_involved: "Følgende oplysninger slettes ikke, når du sletter din konto: samtaler med andre, foretagne transaktioner, anmeldelser osv. Dog vil dit navn ikke længere blive vist ved siden af disse oplysninger."
       unfinished_transactions: "Din konto kan ikke slettes fordi du har udestående transaktioner. Gennemfør venligst alle transaktioner før du sletter din konto."
+      only_admin: ~
       new_password: "Ny adgangskode"
       save: Gem
       these_fields_are_shown_only_to_you: "Brugernavn er vist i din profil, medmindre du har givet dit navn. Andre oplysninger vises kun til dig."
@@ -2391,12 +2424,15 @@ da-DK:
       need_info: ~
       select_country: "Vælg land"
       legal_name: "Kontohavers navn"
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: Fødselsdato
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2411,6 +2447,7 @@ da-DK:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2435,6 +2472,7 @@ da-DK:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:

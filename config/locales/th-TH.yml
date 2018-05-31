@@ -255,6 +255,7 @@ th-TH:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: ~
         description_roadmap_new: ~
@@ -278,6 +279,7 @@ th-TH:
         invalid_facebook_connect_id: รหัสลูกค้าควรมีแต่ตัวเลขเท่านั้น
         facebook_connect_secret: "รหัสลับของลูกค้า Facebook"
         invalid_facebook_connect_secret: "รหัสลับลูกค้าควรมีเฉพาะตัวเลขและตัวอักษรจาก A ถึง F"
+        enable_facebook_login: ~
         save: บันทึกการตั้งค่า
       analytics:
         analytics: การวิเคราะห์ข้อมูลหรือสถิติ
@@ -285,6 +287,10 @@ th-TH:
         google_analytics_key_info_text: "รหัสการติดตามของบัญชี Google Analytics"
         google_analytics_key_info_text_with_instructions: ~
         google_analytics_instructions_link_text: ~
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: บันทึกการตั้งค่า
       menu_links:
         menu_links: ลิงค์เมนู
@@ -365,6 +371,21 @@ th-TH:
           other_party: ~
         participants: ~
         profile: ~
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: "แก้ไขข้อมูลรายการ '%{field_name}'"
@@ -626,11 +647,17 @@ th-TH:
         payments_not_enabled: ~
     transaction_types:
       sell: ขาย
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: ให้เช่า
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: ให้เปล่า
       lend: ให้ยืม
       swap: แลก
       service: ให้ข้อเสนอ
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: ต้องการ
       inquiry: ประกาศ
       share_for_free: แบ่งปันฟรี
@@ -1125,6 +1152,8 @@ th-TH:
       reject_authorization_error: ~
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: กลับไปหน้าแรก
     error_404:
@@ -1515,6 +1544,7 @@ th-TH:
       listing_author_payment_details_missing: "โปรดติดต่อผู้ขายโดยการกดปุ่ม 'ติดต่อ' ด้านล่าง ผู้ขายจำเป็นต้องอัพเดทรายละเอียดการชำระเงินของตนเพื่อที่จะรับเงิน"
       images_are_processing: ~
       automatically_logged_out_please_sign_in: "คุณใช้งานเกินระยะเวลาที่กำหนด โปรดเข้าสู่ระบบอีกครั้งเพื่อดำเนินการต่อ"
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: บัญชี
       notifications: แจ้งเตือน
@@ -1932,7 +1962,8 @@ th-TH:
         other: "การเข้าถึงไปยัง %{service_name} ถูกจำกัด  คุณจำเป็นต้องมีที่อยู่อีเมล '%{allowed_emails}' เพื่อที่จะเข้าร่วม"
       family_name: นามสกุล
       given_name: ชื่อ
-      i_accept_the: ฉันยอมรับ
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: ~
       invalid_invitation_code: รหัสเชิญไม่ถูกต้อง
       invitation_code: รหัสเชิญ
       not_required: ", ไม่จำเป็น"
@@ -1941,6 +1972,7 @@ th-TH:
       show_my_name_to_others: "แสดงชื่อจริงของฉันแก่ผู้ใช้ %{service_name}"
       sign_up: "สร้างบัญชีใหม่ใน %{service_name}"
       terms: ข้อกำหนดการใช้งาน
+      privacy: ~
       username_is_in_use: ชื่อผู้ใช้ได้ถูกใช้ไปแล้ว
       username_is_invalid: "ชื่อผู้ใช้ไม่ถูกต้อง ตัวอักษร ตัวเลข และเส้นใต้เท่านั้นที่สามารถใช้ได้"
       visible_only_to_you: "ปรากฎให้เห็นเฉพาะกับคุณ และผู้ดูแลระบบตลาด"
@@ -2045,6 +2077,7 @@ th-TH:
       delete_personal_information: "หากคุณลบบัญชีของคุณ ข้อมูลส่วนบุคคลของคุณ (ชื่อ , หมายเลขโทรศัพท์, ที่อยู่, อีเมล์, ภาพโปรไฟล์ ฯลฯ) จะถูกลบออกอย่างถาวร และไม่สามารถกู้คืนได้ รายการทั้งหมดที่คุณได้สร้างขึ้นจะถูกลบออก คุณจะไม่สามารถเปิดใช้งานบัญชีของคุณได้อีก"
       delete_information_others_involved: "ข้อมูลที่สมาชิกคนอื่น ๆ มีส่วนเกี่ยวข้อง (บทสนทนากับคนอื่น ๆ, การทำธุรกรรมที่คุณได้ทำ, ความเห็นที่คุณให้กับคนอื่น ๆ ฯลฯ) จะไม่ถูกลบ เมื่อคุณลบบัญชีของคุณ อย่างไรก็ตาม ชื่อของคุณจะไม่ถูกแสดง ในข้อมูลเหล่านั้น"
       unfinished_transactions: ~
+      only_admin: ~
       new_password: รหัสผ่านใหม่
       save: บันทึก
       these_fields_are_shown_only_to_you: "ชื่อผู้ใช้จะปรากฏในโปรไฟล์ของคุณ นอกจากคุณจะให้ชื่อของคุณเอง ข้อมูลอื่น ๆ จะแสดงให้เห็นเฉพาะกับคุณ"
@@ -2352,12 +2385,15 @@ th-TH:
       need_info: ~
       select_country: ~
       legal_name: ~
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: ~
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2372,6 +2408,7 @@ th-TH:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2396,6 +2433,7 @@ th-TH:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:

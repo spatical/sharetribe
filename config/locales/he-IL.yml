@@ -251,6 +251,7 @@ he-IL:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: ~
         description_roadmap_new: ~
@@ -274,6 +275,7 @@ he-IL:
         invalid_facebook_connect_id: ~
         facebook_connect_secret: ~
         invalid_facebook_connect_secret: ~
+        enable_facebook_login: ~
         save: ~
       analytics:
         analytics: ~
@@ -281,6 +283,10 @@ he-IL:
         google_analytics_key_info_text: ~
         google_analytics_key_info_text_with_instructions: ~
         google_analytics_instructions_link_text: ~
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: ~
       menu_links:
         menu_links: "תפריט קישורים"
@@ -361,6 +367,21 @@ he-IL:
           other_party: "צד אחר"
         participants: שיחה
         profile: "‎%{author}‎ פרופיל"
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: "ערוך את ‎%{field_name}‎"
@@ -618,11 +639,17 @@ he-IL:
         payments_not_enabled: ~
     transaction_types:
       sell: מוכר
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: משכיר
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: מוסר
       lend: משאיל
       swap: מחליף
       service: מציעה
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: מחפש
       inquiry: הַכרָזָה
       share_for_free: "שיתוף בחינם"
@@ -1117,6 +1144,8 @@ he-IL:
       reject_authorization_error: ~
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: "בחזרה לעמוד הראשי"
     error_404:
@@ -1507,6 +1536,7 @@ he-IL:
       listing_author_payment_details_missing: "צור קשר עם המחבר על ידי לחיצה על הלחצן 'צור קשר' בהמשך. הם צריכים לעדכן את פרטי התשלום שלהם כדי לקבל תשלומים."
       images_are_processing: ~
       automatically_logged_out_please_sign_in: ~
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: חשבון
       notifications: התראות
@@ -1925,7 +1955,8 @@ he-IL:
         other: "הגישה אל ‎‎%{service_name}‎‎ מוגבלת. כדי להצטרף אתה צריך כתובת דוא\"ל '‎%{allowed_emails}‎'."
       family_name: "שם משפחה"
       given_name: "שם פרטי"
-      i_accept_the: "אני מאשר"
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: ~
       invalid_invitation_code: "קוד ההזמנה לא תקין"
       invitation_code: "קוד הזמנה"
       not_required: "לא דרוש"
@@ -1934,6 +1965,7 @@ he-IL:
       show_my_name_to_others: "אחרים ‎%{service_name}‎ הצג את השם האמיתי שלי למשתמשי"
       sign_up: "‎%{service_name}‎ צור חשבון חדש ב‎"
       terms: "תנאי שימוש"
+      privacy: ~
       username_is_in_use: ".שם המשתמש כבר קיים"
       username_is_invalid: "שם משתמש לא חוקי. תווים מותרים הם אותיות, מספרים וקו תחתון."
       visible_only_to_you: "גלוי רק לך ולמנהל האתר"
@@ -2038,6 +2070,7 @@ he-IL:
       delete_personal_information: ~
       delete_information_others_involved: ~
       unfinished_transactions: ~
+      only_admin: ~
       new_password: "סיסמה חדשה"
       save: שמור
       these_fields_are_shown_only_to_you: "שם המשתמש יוצר בחשבון שלך אלא אם רשמת את השם שלך. כל המידע נוסף יוצג רק לך."
@@ -2341,12 +2374,15 @@ he-IL:
       need_info: ~
       select_country: ~
       legal_name: ~
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: ~
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2361,6 +2397,7 @@ he-IL:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2385,6 +2422,7 @@ he-IL:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:

@@ -245,6 +245,7 @@ el:
         search_by_name_email: ~
         reset_search: ~
         for_search_terms: ~
+        this_makes_the_user_an_admin: ~
       new_layout:
         new_layout: ~
         description_roadmap_new: ~
@@ -268,6 +269,7 @@ el:
         invalid_facebook_connect_id: ~
         facebook_connect_secret: ~
         invalid_facebook_connect_secret: ~
+        enable_facebook_login: ~
         save: ~
       analytics:
         analytics: ~
@@ -275,6 +277,10 @@ el:
         google_analytics_key_info_text: ~
         google_analytics_key_info_text_with_instructions: ~
         google_analytics_instructions_link_text: ~
+        sharetribe_analytics: ~
+        sharetribe_analytics_info_text_with_instructions: ~
+        sharetribe_analytics_instructions_link_text: ~
+        end_user_analytics: ~
         save: ~
       menu_links:
         menu_links: ~
@@ -355,6 +361,21 @@ el:
           other_party: ~
         participants: ~
         profile: ~
+      testimonials:
+        testimonials: ~
+        no_testimonials_found: ~
+        displaying_xx_reviews: ~
+        headers:
+          transaction: ~
+          author: ~
+          receiver: ~
+          status: ~
+          grade: ~
+          note: ~
+        status:
+          waiting: ~
+          skipped: ~
+          published: ~
     custom_fields:
       edit:
         edit_listing_field: ~
@@ -612,11 +633,17 @@ el:
         payments_not_enabled: ~
     transaction_types:
       sell: πώληση
+      sell_w_online_payment: ~
+      sell_wo_online_payment: ~
       rent: ενοικίαση
+      rent_w_online_payment: ~
+      rent_wo_online_payment: ~
       give: δωρεά
       lend: δανεισμός
       swap: ανταλλαγές
       service: προσφορές
+      service_w_online_payment: ~
+      service_wo_online_payment: ~
       request: αιτήματα
       inquiry: ~
       share_for_free: "δωρεάν παραχώρηση"
@@ -1109,6 +1136,8 @@ el:
       reject_authorization_error: ~
     stripe:
       generic_error: ~
+      accept_authorization_error: ~
+      reject_authorization_error: ~
   error_pages:
     back_to_kassi_front_page: "Επιστροφή στην αρχική σελίδα"
     error_404:
@@ -1499,6 +1528,7 @@ el:
       listing_author_payment_details_missing: ~
       images_are_processing: ~
       automatically_logged_out_please_sign_in: ~
+      stripe_you_account_balance_is_not_0: ~
     settings:
       account: Λογαριασμός
       notifications: Ειδοποιήσεις
@@ -1917,7 +1947,8 @@ el:
         other: "Αυτή η κοινότητα αφορά το %{community_name}. Για να εγγραφείτε πρέπει η διεύθυνση email σας να αποδεικνύει ότι μπορείτε να συμμετέχετε εδώ."
       family_name: Επώνυμο
       given_name: Όνομα
-      i_accept_the: "Αποδέχομαι τους"
+      i_accept_the_terms_and_privacy: ~
+      admin_emails_consent: ~
       invalid_invitation_code: "Ο κωδικός της πρόσκλησης δεν είναι έγκυρος."
       invitation_code: "Κωδικός πρόσκλησης"
       not_required: ", δεν απαιτείται"
@@ -1926,6 +1957,7 @@ el:
       show_my_name_to_others: "Να εμφανίζεται το πραγματικό μου όνομα στους άλλους χρήστες του %{service_name}"
       sign_up: "Δημιουργήστε λογαριασμό στο %{service_name}"
       terms: "όρους χρήσης"
+      privacy: ~
       username_is_in_use: "Το όνομα χρήστη που δώσατε χρησιμοποιείται ήδη."
       username_is_invalid: "Αυτό το όνομα χρήστη δεν είναι έγκυρο. Επιτρέπονται μόνο γράμματα, αριθμοί και κάτω παύλες."
       visible_only_to_you: "ορατή μόνο σε σας και το διαχειριστή της κοινότητας"
@@ -2030,6 +2062,7 @@ el:
       delete_personal_information: ~
       delete_information_others_involved: ~
       unfinished_transactions: ~
+      only_admin: ~
       new_password: "Νέος κωδικός"
       save: Αποθήκευση
       these_fields_are_shown_only_to_you: "Το όνομα χρήστη εμφανίζεται στο προφίλ σας εκτός αν έχετε δώσει το πραγματικό σας όνομα. Οι υπόλοιπες πληροφορίες είναι ορατές μόνο σε σας."
@@ -2326,12 +2359,15 @@ el:
       need_info: ~
       select_country: ~
       legal_name: ~
+      first_name: ~
+      last_name: ~
       country: ~
       birth_date: ~
       ssn_last_4: ~
       personal_id_number: ~
       address_country: ~
       address_state: ~
+      address_province: ~
       address_city: ~
       address_postal_code: ~
       address_line1: ~
@@ -2346,6 +2382,7 @@ el:
       bank_routing_1: ~
       bank_routing_2: ~
       bank_currency: ~
+      update_also_bank_account: ~
       messages:
         account_number: ~
         routing_number: ~
@@ -2370,6 +2407,7 @@ el:
     form_pin:
       social_insurance_number: ~
       social_security_number: ~
+      ssn_last_4: ~
       hong_kong_identity_card: ~
       singapore_identity_card: ~
       messages:
