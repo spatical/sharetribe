@@ -32,6 +32,9 @@ production:
     username: b2ee382d7b0674
     password: 426d5197
     host: us-cdbr-iron-east-04.cleardb.net
+    sslkey: certs/b2ee382d7b0674-key.pem
+    sslcert: certs/b2ee382d7b0674-cert.pem
+    sslca: certs/cleardb-ca.pem
 
 cucumber:
   <<: *test
