@@ -27,14 +27,11 @@ staging:
 
 production:
     adapter: mysql2
-    database: heroku_f7e690b4084e123
+    database: huntapp_DEV
     encoding: utf8
-    username: b2ee382d7b0674
-    password: 426d5197
-    host: us-cdbr-iron-east-04.cleardb.net
-    sslkey: certs/b2ee382d7b0674-key.pem
-    sslcert: certs/b2ee382d7b0674-cert.pem
-    sslca: certs/cleardb-ca.pem
+    username: huntrfishr4DEV
+    password: 301Q-9V~c!IZf4E32Kw
+    host: huntfishapp.ciixv5a1mq8i.us-west-2.rds.amazonaws.com
 
 cucumber:
   <<: *test
